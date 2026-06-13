@@ -9,14 +9,17 @@ import os
 app = Flask(__name__)
 app.secret_key = "your-secret-key-change-this"
 
-# ========== НАСТРОЙКА БАЗЫ ДАННЫХ ==========
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
-
 # ========== НАСТРОЙКА GOOGLE ==========
 GOOGLE_CLIENT_ID = os.environ['GOOGLE_CLIENT_ID']
 GOOGLE_CLIENT_SECRET = os.environ['GOOGLE_CLIENT_SECRET']
+DATABASE_URL = os.environ['DATABASE_URL']
+
+
+# ========== НАСТРОЙКА БАЗЫ ДАННЫХ ==========
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
 
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 os.environ['OAUTHLIB_RELAX_TOKEN_SCOPE'] = '1'

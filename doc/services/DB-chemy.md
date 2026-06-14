@@ -2,6 +2,7 @@
 CREATE TABLE Users (
     user_id SERIAL PRIMARY KEY,
     email VARCHAR(255) UNIQUE NOT NULL,
+    goodle_id VARCHAR(255) UNIQUE NOT NULL,
     location VARCHAR(255),
     created_at TIMESTAMP DEFAULT NOW()
 );

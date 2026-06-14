@@ -16,7 +16,7 @@ CREATE TABLE Products (
     description TEXT,
     price DECIMAL(10,2) NOT NULL,
     quantity INTEGER NOT NULL,
-    media_dir_url VARCHAR(255),
+    media_url VARCHAR(255),
     updated_at TIMESTAMP DEFAULT NOW()
 );
 

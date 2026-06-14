@@ -43,3 +43,7 @@
 ### **3. База данных (PostgreSQL)**
 - **Что хранит**: Все постоянные данные — пользователи, товары, заказы
 - **Особенность**: Это «источник правды», всё остальное — лишь кэш
+
+
+### Ссылки:
+Client ID for Web Application https://console.cloud.google.com/auth/clients/979281878417-ici4q32ok115eqthrth19r1715s0k5je.apps.googleusercontent.com?project=board-499311&supportedpurview=project
